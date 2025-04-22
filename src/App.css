@@ -68,57 +68,78 @@ p {
   font-weight: bold;
   color: green;
 }
-/* Prilagodba boje teksta u kalendaru */
+/* Glavni stilovi za kalendar */
 .react-calendar {
-  color: black;
+  width: 100%;
+  background: white;
+  border: none;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.125em;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.react-calendar__tile {
-  color: black;
+/* Navigacija (mjesec, godina, strelice) */
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
-
-.react-calendar__tile--active {
-  background: #c71585;
-  color: white;
-}
-/* Tekst u kalendaru */
-.react-calendar {
-  color: black;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Mjesec i godine (naslov) */
 .react-calendar__navigation button {
   color: black;
+  background: none;
   font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+.react-calendar__navigation button:disabled {
+  opacity: 0.4;
 }
 
-/* Strelice lijevo/desno */
-.react-calendar__navigation__prev-button,
-.react-calendar__navigation__next-button {
+/* Dani u tjednu (pon, uto...) */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
   color: black;
 }
-
-/* Nedjelje crveno */
-.react-calendar__month-view__weekdays__weekday:nth-child(1) abbr {
-  color: red;
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
 }
 
-/* Dani izvan trenutnog mjeseca (svijetlo sivi) */
-.react-calendar__month-view__days__day--neighboringMonth {
-  color: #d3d3d3;
+/* Nedjelje - slova crvena */
+.react-calendar__month-view__weekdays__weekday:nth-child(7) abbr {
+  color: red !important;
 }
 
-/* Aktivni dan */
-.react-calendar__tile--active {
-  background: #c71585;
-  color: white;
-  border-radius: 8px;
+/* Dani u mjesecu */
+.react-calendar__tile {
+  background: none;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: black;
+  border-radius: 6px;
+  transition: background 0.2s ease;
 }
-
-/* Hover efekt za dane */
 .react-calendar__tile:hover {
-  background: #f0c9dd;
-  color: black;
-  border-radius: 8px;
+  background: #ffe6f0;
+  cursor: pointer;
 }
+.react-calendar__tile--active {
+  background: #ffb3d9;
+  color: white;
+}
+
+/* Dani izvan trenutnog mjeseca */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: lightgray !important;
+}
+
+/* Nedjelje - brojevi crveni */
+.react-calendar__month-view__days__day:nth-child(7n) {
+  color: red !important;
+}
+
