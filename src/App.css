@@ -1,0 +1,124 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff0f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #c71585;
+  margin-bottom: 30px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #c71585;
+}
+
+form input {
+  form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: white;
+  }
+  
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #c71585;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #a0136e;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+}
+/* Prilagodba boje teksta u kalendaru */
+.react-calendar {
+  color: black;
+}
+
+.react-calendar__tile {
+  color: black;
+}
+
+.react-calendar__tile--active {
+  background: #c71585;
+  color: white;
+}
+/* Tekst u kalendaru */
+.react-calendar {
+  color: black;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Mjesec i godine (naslov) */
+.react-calendar__navigation button {
+  color: black;
+  font-weight: bold;
+}
+
+/* Strelice lijevo/desno */
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button {
+  color: black;
+}
+
+/* Nedjelje crveno */
+.react-calendar__month-view__weekdays__weekday:nth-child(1) abbr {
+  color: red;
+}
+
+/* Dani izvan trenutnog mjeseca (svijetlo sivi) */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #d3d3d3;
+}
+
+/* Aktivni dan */
+.react-calendar__tile--active {
+  background: #c71585;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Hover efekt za dane */
+.react-calendar__tile:hover {
+  background: #f0c9dd;
+  color: black;
+  border-radius: 8px;
+}
