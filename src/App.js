@@ -21,7 +21,7 @@ function App() {
   ];
 
   // Radno vrijeme (ponedjeljak - petak)
-  const radniDani = [1, 2, 3, 4, 5]; // Ponedjeljak = 1, Nedjelja = 0
+  
 
   // Provjera zauzetosti termina
   const isTermenZauzet = (datum, vrijeme) => {
